@@ -2,14 +2,11 @@
  *  SArchiveXar.h
  *  SArchiveKit
  *
- *  Created by Shadow Team.
- *  Copyright (c) 2007 Shadow Lab. All rights reserved.
+ *  Created by Jean-Daniel Dupas.
+ *  Copyright (c) 2008 Jean-Daniel Dupas. All rights reserved.
  */
 
-#include <sxar/xar.h>
-
-WB_PRIVATE
-xar_file_t xar_file_find(xar_file_t f, const char *path);
+#include "xar.h"
 
 WB_PRIVATE
 xar_file_t xar_file_get_parent(xar_file_t file);
@@ -17,22 +14,22 @@ xar_file_t xar_file_get_parent(xar_file_t file);
 WB_PRIVATE
 NSString *SArchiveXarFileGetProperty(xar_file_t file, NSString *property);
 WB_PRIVATE
-void SArchiveXarFileSetProperty(xar_file_t file, NSString *property, NSString *value);
+NSInteger SArchiveXarFileSetProperty(xar_file_t file, NSString *property, NSString *value);
 
 WB_PRIVATE
 NSString *SArchiveXarFileGetAttribute(xar_file_t file, NSString *property, NSString *attribute);
 WB_PRIVATE
-void SArchiveXarFileSetAttribute(xar_file_t file, NSString *property, NSString *attribute, NSString *value);
+NSInteger SArchiveXarFileSetAttribute(xar_file_t file, NSString *property, NSString *attribute, NSString *value);
 
 WB_PRIVATE
 NSString *SArchiveXarSubDocGetProperty(xar_subdoc_t doc, NSString *property);
 WB_PRIVATE
-void SArchiveXarSubDocSetProperty(xar_subdoc_t doc, NSString *property, NSString *value);
+NSInteger SArchiveXarSubDocSetProperty(xar_subdoc_t doc, NSString *property, NSString *value);
 
 WB_PRIVATE
 NSString *SArchiveXarSubDocGetAttribute(xar_subdoc_t doc, NSString *property, NSString *attribute);
 WB_PRIVATE
-void SArchiveXarSubDocSetAttribute(xar_subdoc_t doc, NSString *property, NSString *attribute, NSString *value);
+NSInteger SArchiveXarSubDocSetAttribute(xar_subdoc_t doc, NSString *property, NSString *attribute, NSString *value);
 
 #pragma mark -
 #import <SArchiveKit/SArchiveFile.h>
