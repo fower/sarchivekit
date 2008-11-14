@@ -410,6 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B2133A00ECCB9400069C59E /* Build configuration list for PBXNativeTarget "sxar" */;
 			buildPhases = (
+				1BFA95640ECDBB4500CC0D44 /* Patch Xar */,
 				1B2133970ECCB93B0069C59E /* Headers */,
 				1B2133980ECCB93B0069C59E /* Sources */,
 				1B2133990ECCB93B0069C59E /* Frameworks */,
@@ -472,6 +473,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BFA95640ECDBB4500CC0D44 /* Patch Xar */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/support/xar/patch.diff",
+			);
+			name = "Patch Xar";
+			outputPaths = (
+				"$(SRCROOT)/xar/timestamp",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/tcsh;
+			shellScript = "patch -d xar/ -N < support/xar/patch.diff\ntouch xar/timestamp";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B2133980ECCB93B0069C59E /* Sources */ = {
