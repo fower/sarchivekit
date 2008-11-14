@@ -2,8 +2,8 @@
  *  SArchiveFile.h
  *  SArchiveKit
  *
- *  Created by Shadow Team.
- *  Copyright (c) 2007 Shadow Lab. All rights reserved.
+ *  Created by Jean-Daniel Dupas.
+ *  Copyright (c) 2008 Jean-Daniel Dupas. All rights reserved.
  */
 
 enum {

@@ -2,8 +2,8 @@
  *  SArchive.m
  *  SArchiveKit
  *
- *  Created by Shadow Team.
- *  Copyright (c) 2007 Shadow Lab. All rights reserved.
+ *  Created by Jean-Daniel Dupas.
+ *  Copyright (c) 2008 Jean-Daniel Dupas. All rights reserved.
  */
 
 #import <SArchiveKit/SArchive.h>
@@ -292,7 +292,7 @@ int32_t sa_xar_err_handler(int32_t severit, int32_t err, xar_errctx_t ctx, void 
   /* Modification Date */
   NSDate *date = [props objectForKey:NSFileModificationDate];
   if (date) {
-    info.st_mtime = (time_t)[date timeIntervalSince1970];
+    info.st_mtime = lround([date timeIntervalSince1970]);
   } else {
     struct timeval t;
     gettimeofday(&t, NULL);
