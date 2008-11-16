@@ -136,12 +136,10 @@
 		1B2133D10ECCB9470069C59E /* zxar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zxar.h; sourceTree = "<group>"; };
 		1B2134070ECCB9E80069C59E /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		1B2134080ECCB9E80069C59E /* xar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xar.h; sourceTree = "<group>"; };
-		1B8B8CB90ECD9F480093D114 /* DebugTiger32+64.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "DebugTiger32+64.xcconfig"; sourceTree = "<group>"; };
-		1B8B8CBA0ECD9F480093D114 /* DebugTiger32.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugTiger32.xcconfig; sourceTree = "<group>"; };
-		1B8B8CBD0ECD9F480093D114 /* ReleaseTiger32+64.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "ReleaseTiger32+64.xcconfig"; sourceTree = "<group>"; };
-		1B8B8CBE0ECD9F480093D114 /* ReleaseTiger32.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseTiger32.xcconfig; sourceTree = "<group>"; };
+		1B5A2BAF0ED07A0F0036568B /* SArchiveKit.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SArchiveKit.xcconfig; sourceTree = "<group>"; };
+		1B5A2BB00ED07A0F0036568B /* SArchiveKitDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SArchiveKitDebug.xcconfig; sourceTree = "<group>"; };
+		1B5A2BB10ED07A0F0036568B /* SArchiveKitRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SArchiveKitRelease.xcconfig; sourceTree = "<group>"; };
 		1B8F56810D68C5B500B1BE97 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1BA3F6450ECCA96000BEA038 /* SharedPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedPrefix.pch; sourceTree = "<group>"; };
 		1BF4AA8B0CBE105500A7A6FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1BF4AA940CBE107A00A7A6FD /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
 		1BF4AA960CBE108400A7A6FD /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = /usr/lib/libbz2.dylib; sourceTree = "<absolute>"; };
@@ -205,7 +203,7 @@
 				034768DFFF38A50411DB9C8B /* Products */,
 				1B2133A10ECCB9470069C59E /* xar */,
 				1B2134040ECCB9E80069C59E /* support */,
-				1BA3F6400ECCA96000BEA038 /* WBConfig */,
+				1B5A2BAE0ED07A0F0036568B /* xcconfigs */,
 			);
 			name = SArchive;
 			sourceTree = "<group>";
@@ -327,33 +325,16 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		1B8B8CA20ECD9F480093D114 /* xcconfigs */ = {
+		1B5A2BAE0ED07A0F0036568B /* xcconfigs */ = {
 			isa = PBXGroup;
 			children = (
-				1B8B8CB60ECD9F480093D114 /* wonderbox */,
+				1B5A2BAF0ED07A0F0036568B /* SArchiveKit.xcconfig */,
+				1B5A2BB00ED07A0F0036568B /* SArchiveKitDebug.xcconfig */,
+				1B5A2BB10ED07A0F0036568B /* SArchiveKitRelease.xcconfig */,
 			);
-			path = xcconfigs;
-			sourceTree = "<group>";
-		};
-		1B8B8CB60ECD9F480093D114 /* wonderbox */ = {
-			isa = PBXGroup;
-			children = (
-				1B8B8CB90ECD9F480093D114 /* DebugTiger32+64.xcconfig */,
-				1B8B8CBA0ECD9F480093D114 /* DebugTiger32.xcconfig */,
-				1B8B8CBD0ECD9F480093D114 /* ReleaseTiger32+64.xcconfig */,
-				1B8B8CBE0ECD9F480093D114 /* ReleaseTiger32.xcconfig */,
-			);
-			path = wonderbox;
-			sourceTree = "<group>";
-		};
-		1BA3F6400ECCA96000BEA038 /* WBConfig */ = {
-			isa = PBXGroup;
-			children = (
-				1BA3F6450ECCA96000BEA038 /* SharedPrefix.pch */,
-				1B8B8CA20ECD9F480093D114 /* xcconfigs */,
-			);
-			path = WBConfig;
-			sourceTree = "<group>";
+			name = xcconfigs;
+			path = ../xcconfigs;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -590,7 +571,6 @@
 		};
 		1B7CF7A00D3577D90068DAD1 /* Release 64Bits */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B8B8CBD0ECD9F480093D114 /* ReleaseTiger32+64.xcconfig */;
 			buildSettings = {
 			};
 			name = "Release 64Bits";
@@ -639,14 +619,14 @@
 		};
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B8B8CBA0ECD9F480093D114 /* DebugTiger32.xcconfig */;
+			baseConfigurationReference = 1B5A2BB00ED07A0F0036568B /* SArchiveKitDebug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B8B8CBE0ECD9F480093D114 /* ReleaseTiger32.xcconfig */;
+			baseConfigurationReference = 1B5A2BB10ED07A0F0036568B /* SArchiveKitRelease.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
