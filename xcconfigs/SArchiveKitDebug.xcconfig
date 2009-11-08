@@ -1,3 +1,3 @@
 
-#include "../WBConfig/xcconfigs/wonderbox/DebugTiger32.xcconfig"
+#include "../WBConfig/xcconfigs/wonderbox/Tiger_Debug.xcconfig"
 #include "SArchiveKit.xcconfig"
